@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>Douceurs Gourmandes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image:url("images/farine.jpg")  ;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #8B4513;
+      color: white;
+      padding: 15px 30px;
+    }
+    nav h1 { font-family: "Georgia", serif; }
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li { margin-left: 20px; }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover { color: #FFD700; }
+
+    .cakes {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px;
+      flex-wrap: wrap;
+    }
+    .cake {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 250px;
+    }
+    .cake img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .cake h3 {
+      margin: 10px 0;
+      color: #5C4033;
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      height: 350px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      background: #fff;
+    }
+    .slides {
+      display: flex;
+      width: 200%;
+      height: 100%;
+      animation: slide 6s infinite;
+    }
+    .slides .cake {
+      flex: 0 0 50%;
+      box-shadow: none;
+      border-radius: 0;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0%); }
+      50% { transform: translateX(-57%); }
+      100% { transform: translateX(0%); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Douceurs Gourmandes</h1>
+    <ul>
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#">Nos Gâteaux</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="cakes">
+    <!-- Fraisier -->
+    <div class="cake">
+      <img src="images/fraisier.jpg" alt="Fraisier">
+      <h3>Fraisier</h3>
+      <p>Un gâteau léger à la crème et aux fraises fraîches.</p>
+    </div>
+
+    <!-- Chocolat Royal -->
+    <div class="cake">
+      <img src="images/choco.jpg" alt="Chocolat Royal">
+      <h3>Chocolat Royal</h3>
+      <p>Un délice intense pour les amoureux du chocolat.</p>
+    </div>
+
+    <!-- Tarte citron -->
+    <div class="cake">
+      <img src="images/citron.jpg" alt="Tarte au citron">
+      <h3>Tarte au citron</h3>
+      <p>Un équilibre parfait entre douceur et acidité.</p>
+    </div>
+  </section>
+
+  <div class="slider">
+    <div class="slides">
+      <!-- Mille-feuille -->
+      <div class="cake">
+        <img src="images/mille feuille.png" alt="Mille-feuille">
+        <h3>Mille-feuille</h3>
+        <p>Des couches feuilletées croustillantes et une crème onctueuse.</p>
+      </div>
+      <!-- Paris-Brest -->
+      <div class="cake">
+        <img src="images/paris-brest.jpg" alt="Paris-Brest">
+        <h3>Paris-Brest</h3>
+        <p>Un dessert gourmand à la crème pralinée et pâte à choux.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
